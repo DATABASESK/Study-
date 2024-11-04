@@ -433,101 +433,82 @@ The Software Requirements Specification (SRS) document organizes all the require
 
 --- 
 
-1. Introduction 
+Here's a simplified explanation of how an SRS (Software Requirements Specification) document is organized. This document makes it clear to everyone what the software will do, so the development team and stakeholders are on the same page:
 
-This section gives an overview of the project and the purpose of the SRS document. 
+---
 
-Purpose of the Document: Explains why this document exists and who should read it. 
+### 1. Introduction
 
-Project Overview: Describes what the software is about and what problem it will solve. 
+This section gives an overview of the project and explains why this document is important.
 
-Scope of the Project: Outlines the main goals, features, and what the software will (and won’t) do. 
+- **Purpose of the Document**: States why the document was created and who should read it.
+- **Project Overview**: Briefly describes what the software is meant to do and what problem it solves.
+- **Scope of the Project**: Lists the main goals, features, and limitations—what the software will and won’t do.
+- **Definitions and Acronyms**: Lists any technical terms or abbreviations for easier understanding.
 
-Definitions and Acronyms: Lists any technical terms, abbreviations, or acronyms used in the document to help everyone understand.
+---
 
+### 2. Overall Description
 
+This section provides a general picture of the software and the environment in which it will work.
 
---- 
+- **Product Perspective**: Describes how this software fits into a bigger system (if applicable).
+- **User Characteristics**: Details the types of users, what they’ll need, and any skills they might require.
+- **Constraints**: Lists any limits like hardware, software, regulations, or budget restrictions.
+- **Assumptions and Dependencies**: States any conditions that are assumed to be true, like resources or dependencies on other projects.
 
-2. Overall Description 
+---
 
-This part provides a high-level view of the software and the environment it will operate in. 
+### 3. Specific Requirements
 
-Product Perspective: Explains how this software fits into a larger system or environment, if applicable. 
+This is the most detailed part, covering everything the software needs to do.
 
-User Characteristics: Describes the main types of users, their needs, and any skills they may need to use the software. 
+- **Functional Requirements**: Lists each function the software should perform (features and actions), with detailed descriptions for developers.
+- **User Interface Requirements**: Describes what users will see, like buttons, screens, or forms, to ensure a user-friendly experience.
+- **Performance Requirements**: Specifies things like speed, response times, and resource use (memory, storage) to make sure the software performs well.
+- **Security Requirements**: Outlines safety measures to protect user data and ensure that only authorized users have access.
 
-Constraints: Lists any limitations, like hardware, software, regulations, or budget restrictions. 
+---
 
-Assumptions and Dependencies: States any conditions assumed to be true, like available resources, or dependencies on other projects.
+### 4. External Interface Requirements
 
+This section explains how the software will interact with other systems, devices, or hardware.
 
+- **User Interfaces**: Details what the screens will look like and how users will interact with them.
+- **Hardware Interfaces**: Lists specific hardware the software needs, like sensors or devices.
+- **Software Interfaces**: Describes other software the software will need to connect with, like databases or APIs.
+- **Communication Interfaces**: Explains how data will be sent or received over networks.
 
---- 
+---
 
-3. Specific Requirements 
+### 5. Non-Functional Requirements
 
-This is the most detailed section, listing all the specific requirements the software needs to meet. 
+These are qualities the software needs, not specific features.
 
-Functional Requirements: Lists each function the software should perform, like features and actions. Each requirement is described in detail so developers understand what to build. 
+- **Reliability**: Describes how stable the software should be and how often it should work without failure.
+- **Availability**: States how much time the software should be operational, like 24/7 or only during business hours.
+- **Scalability**: Indicates if the software should be able to handle more users or data in the future.
+- **Usability**: Focuses on how easy it should be for users to learn and use the software.
 
-User Interface Requirements: Describes what users will see, like buttons, screens, or forms, to ensure the software is user-friendly. 
+---
 
-Performance Requirements: Specifies speed, response times, or resource use, like memory or storage, to ensure the software performs well. 
+### 6. Appendices
 
-Security Requirements: Lists any safety measures needed to protect user data and ensure only authorized users have access.
+This part includes extra information to support understanding of the document.
 
+- **Glossary**: Defines additional terms or technical words not covered in the introduction.
+- **References**: Lists any resources (documents, websites) used to create the SRS.
+- **Supporting Information**: Contains any extra visuals like diagrams or charts that help explain the requirements.
 
+---
 
---- 
-
-4. External Interface Requirements 
-
-This section describes how the software will interact with other systems, devices, or hardware. 
-
-User Interfaces: Details what the screens will look like and how users will interact with them. 
-
-Hardware Interfaces: Explains any specific hardware that the software needs to work with, like sensors or specific devices. 
-
-Software Interfaces: Lists other software or applications the software will need to connect with, like databases or APIs. 
-
-Communication Interfaces: Describes how data will be sent or received if the software needs to communicate over networks.
-
-
-
---- 
-
-5. Non-Functional Requirements 
-
-These are qualities the software needs to have, not specific functions. 
-
-Reliability: States how stable the software should be and how often it should work without failures. 
-
-Availability: Describes how much time the software needs to be operational, like 24/7 or only during business hours. 
-
-Scalability: Explains if the software needs to handle more users or data in the future. 
-
-Usability: Focuses on how easy it is for users to learn and use the software effectively.
+This organization helps keep the SRS clear and easy to follow, making sure everyone involved understands what the software will do and what’s needed to make it successful.
 
 
 
 --- 
 
-6. Appendices 
-
-This section includes any extra information that helps understand the document but isn’t essential to the main sections. 
-
-Glossary: Defines additional terms or technical words not covered in the introduction. 
-
-References: Lists any documents, websites, or resources that were used to create the SRS document. 
-
-Supporting Information: Contains diagrams, charts, or other visuals that help explain the requirements.
-
-
-
---- 
-
-3. Formal system security 
+3. Formal system specifications:
 
 Formal system specification is a way of describing software systems with mathematical precision. It helps ensure that requirements are clear, consistent, and error-free. Here are the basic concepts of formal specifications explained simply:
 
