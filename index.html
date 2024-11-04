@@ -543,6 +543,348 @@ The satisfaction relation is the relationship between the specification (the req
 
 ---
 
+UNIT 3
+
+
+Function-oriented design is a software development approach that focuses on breaking down a system's functions into smaller, manageable parts. Here's a simplified overview: 
+
+1. Identify High-Level Functions: Start by viewing the system as a "black box" that provides services to users, such as borrowing and returning books in a Library Automation System.
+
+
+2. Break Down Functions: Decompose these high-level functions into more detailed tasks through a process called functional decomposition.
+
+
+3. Organize into Modules: Group related functions into modules, creating a high-level structure for the software, like "User Management" or "Inventory Management."
+
+
+4. Detailed Design: Define the internal workings of each module, including algorithms and data structures, which can then be implemented in a programming language.
+
+
+
+This process is called the SA/SD (Structured Analysis/Structured Design) Methodology and involves two main steps: 
+
+Structured Analysis (SA): Analyzing and visualizing functions using Data Flow Diagrams (DFDs). 
+
+Structured Design (SD): Mapping these functions to modules to create a clear software architecture for implementation.
+
+
+3.5.1 Structured Analysis 
+
+Structured analysis is a method used to understand and represent a system's functions and data flow. Here are the main principles and features of structured analysis: 
+
+1. Top-Down Decomposition: This technique involves breaking down high-level functions into smaller, more detailed functions. It follows a hierarchical approach, making complex systems easier to manage.
+
+
+2. Divide and Conquer: This principle allows for independent decomposition of high-level functions into detailed sub-functions, facilitating a clearer understanding of each component.
+
+
+3. Graphical Representation with Data Flow Diagrams (DFDs): DFDs visually illustrate how data moves through the system, showing inputs, outputs, and storage without detailing the sequence of events or control flow.
+
+
+
+Data Flow Diagrams (DFDs) 
+
+A Data Flow Diagram is a visual tool that represents how information flows within a system. Here’s a breakdown of its purpose and components: 
+
+Purpose of DFDs: 
+
+To show the scope and boundaries of the system. 
+
+To communicate system requirements clearly among stakeholders. 
+
+To act as a starting point for redesigning systems.
+
+
+Key Characteristics of DFDs: 
+
+1. Unique Names: All elements in a DFD should have unique names for easy reference.
+
+
+2. Not a Flowchart: DFDs represent data flow without implying the order of events, unlike flowcharts.
+
+
+3. No Logical Decisions: DFDs should avoid decision points (like diamonds in flowcharts) to maintain focus on data flow.
+
+
+4. Avoid Excessive Details: Defer discussions about errors and handling until the analysis is complete.
+
+
+
+
+DFD Symbols 
+
+1. Function Symbol (Process or Bubble): Represented by a circle, this symbolizes a function that processes input data and produces output.
+
+
+2. External Entity Symbol: Shown as a rectangle, it represents entities outside the system (like users or external systems) that interact with the software.
+
+
+3. Data Flow Symbol: An arrow indicating the direction of data movement between processes or between an external entity and a process.
+
+
+4. Data Store Symbol: Represented by two parallel lines, it symbolizes a logical file that stores data, connected to processes via data flow arrows.
+
+
+5. Output Symbol: Used to represent when a hard copy of data is produced.
+
+
+
+Example: Personal Library Software 
+
+To illustrate structured analysis, consider the Personal Library Software: 
+
+Context Diagram (Figure 3.5): Shows the overall system and its interaction with the owner. 
+
+Level 1 DFD (Figure 3.6): Breaks down the "Manage Own Book" function into more detailed processes, highlighting how data flows between them.
+
+
+In summary, structured analysis and DFDs provide a systematic way to decompose and visualize the functions and data flow in a software system, making it easier to understand and design effective solutions.
+
+
+3.6 STRUCTURED DESIGN 
+
+Structured design aims to convert the results of structured analysis, represented by Data Flow Diagrams (DFDs), into a structure chart that outlines the software architecture. This chart shows the various modules in the system, how they depend on one another, and the data passed between them. Here's an overview of the structured design process and its components. 
+
+Structure Chart Components 
+
+1. Rectangular Boxes: Each box represents a module and is labeled with the module's name.
+
+
+2. Module Invocation Arrows: Arrows connecting boxes indicate which module calls another during execution.
+
+
+3. Data Flow Arrows: Smaller arrows alongside invocation arrows show the data being passed between modules, annotated with the corresponding data names.
+
+
+4. Library Modules: Represented by rectangles with double edges, these are frequently called modules shared across the system.
+
+
+5. Selection Symbol: A diamond shape indicates that one module is invoked based on a specific condition.
+
+
+6. Repetition Symbol: A loop around arrows indicates that modules are invoked repeatedly.
+
+
+
+Transforming a DFD Model into a Structure Chart 
+
+There are systematic techniques to transform a DFD into a structure chart, mainly using two strategies: Transform Analysis and Transaction Analysis. 
+
+1. Transform Analysis 
+
+Transform analysis focuses on identifying primary functional components (modules) and their input/output data. The process involves: 
+
+Dividing the DFD into Three Parts: 
+
+Input: Processes that convert physical input data into logical forms. 
+
+Processing (Central Transform): The main operations performed on the data. 
+
+Output: Processes that convert logical data back into physical forms.
+
+
+Creating the Structure Chart: Draw boxes for the input and output modules, and a central transform box under a root module, which invokes these components. 
+
+Factoring: Identify and add subfunctions, such as read/write operations, error handling, initialization, and termination processes, to ensure all DFD bubbles are represented in the structure chart.
+
+
+2. Transaction Analysis 
+
+Transaction analysis is useful for designing transaction processing programs. It allows users to perform specific tasks (like issuing or returning a book). The steps include: 
+
+Identifying Data: Determine all data entering the DFD. 
+
+Defining Transactions: Each unique way that input data is processed represents a transaction. The number of bubbles where input data intersects defines the number of transactions. 
+
+Mapping Transactions to Modules: Trace input data through the DFD to identify which bubbles belong to the same transaction and group them into a module on the structure chart. 
+
+Structuring the Chart: Draw a root module and list all identified transactions as modules underneath, with each transaction labeled to indicate its type.
+
+
+3.4 APPROACHES TO SOFTWARE DESIGN 
+
+Software design generally falls into two main categories: function-oriented design and object-oriented design. While these approaches differ significantly, they are complementary techniques. The object-oriented approach, being newer and still evolving, is gaining popularity for large program development due to its distinct advantages. 
+
+3.4.1 Features of Function-Oriented Design 
+
+1. Top-Down Decomposition: 
+
+The system is initially viewed as a "black box" that provides certain services to users. 
+
+Example: The function create-new-library-member can be broken down into: 
+
+assign-membership-number 
+
+create-member-record 
+
+print-bill
+
+
+
+
+2. Centralized System State: 
+
+The system state refers to the values of specific data items that affect the system's response to user actions or external events. 
+
+Example: In a library management system, functions like create-new-member, delete-member, and update-member-record share data such as member records for reference and updates.
+
+
+
+
+3.4.2 Object-Oriented Design 
+
+In the object-oriented design (OOD) approach, a system is composed of a collection of objects, each containing its own data and methods (functions). This paradigm emphasizes abstraction and decomposition: 
+
+1. Data Abstraction: 
+
+Data abstraction means that the specifics of how data is stored are hidden from entities external to the object. Users interact with the object without needing to understand its internal structure.
+
+
+
+2. Data Structure: 
+
+A data structure is built from a collection of primitive data items (e.g., integers, floating-point numbers, characters). Programmers construct data structures similarly to how engineers create physical structures using basic materials.
+
+
+
+3. Data Type: 
+
+A data type refers to any entity that can be instantiated in programming. Basic types like int, float, and char are fundamental data types, while Abstract Data Types (ADTs) are user-defined types.
+
+
+
+
+Cohesion and coupling are two fundamental concepts in software engineering that describe the relationships and interactions between modules or components in a software system. Understanding these concepts is critical for designing maintainable, scalable, and robust software. 
+
+Cohesion 
+
+Cohesion refers to how closely related and focused the responsibilities of a single module are. It indicates the degree to which the elements within a module belong together. High cohesion within a module is desirable because it means the module has a single, well-defined purpose, making it easier to understand, maintain, and reuse. 
+
+Classifications of Cohesion: 
+
+1. Functional Cohesion: 
+
+All elements of the module contribute to a single, well-defined task. 
+
+Example: A module that calculates the area of different shapes.
+
+
+
+2. Sequential Cohesion: 
+
+Elements are grouped because the output from one part is the input to another. 
+
+Example: A module that processes user data and then generates a report based on that data.
+
+
+
+3. Communicational Cohesion: 
+
+Elements are grouped because they operate on the same data or contribute to a single output. 
+
+Example: A module that fetches, processes, and displays user data.
+
+
+
+4. Procedural Cohesion: 
+
+Elements are related by the sequence of execution, but they may perform different tasks. 
+
+Example: A module that reads data, processes it, and writes output without a strong relationship between these activities.
+
+
+
+5. Temporal Cohesion: 
+
+Elements are grouped by when they are executed (e.g., they are invoked at the same time). 
+
+Example: A module that initializes system settings at startup.
+
+
+
+6. Logical Cohesion: 
+
+Elements are grouped because they are related logically, even if they perform different functions. 
+
+Example: A module that handles various types of error processing, such as file errors, network errors, etc.
+
+
+
+7. Coincidental Cohesion: 
+
+Elements are grouped arbitrarily without any meaningful relationship. 
+
+Example: A module that contains a mix of unrelated functions, such as logging, data parsing, and user authentication.
+
+
+
+
+Coupling 
+
+Coupling refers to the degree of interdependence between software modules. It indicates how closely connected modules are; lower coupling is generally preferred because it allows modules to be developed, modified, and tested independently. 
+
+Classifications of Coupling: 
+
+1. Content Coupling: 
+
+One module directly accesses or modifies the data of another module. This is the highest level of coupling and is considered undesirable. 
+
+Example: Module A directly accessing and modifying the private data of Module B.
+
+
+
+2. Common Coupling: 
+
+Two or more modules share the same global data. This can lead to unpredictable changes when one module modifies the data. 
+
+Example: Modules A and B both using a shared global variable.
+
+
+
+3. External Coupling: 
+
+Modules depend on externally imposed data formats or communication protocols. 
+
+Example: Module A relies on a specific version of a third-party library that may change.
+
+
+
+4. Control Coupling: 
+
+One module controls the behavior of another by passing it information on what to do (control flags). 
+
+Example: Module A passes a control variable to Module B to dictate which function to execute.
+
+
+
+5. Stamp Coupling (Data-Structured Coupling): 
+
+Modules share a composite data structure but use only a part of it, leading to a loose connection. 
+
+Example: Module A sends an entire data structure to Module B, but B only uses one field.
+
+
+
+6. Data Coupling: 
+
+Modules share data through parameters, but each module uses only the data it needs. 
+
+Example: Module A passes simple data types (like integers or strings) to Module B.
+
+
+
+7. Message Coupling (Low Coupling): 
+
+The lowest level of coupling, where modules interact only through message passing. There is no direct access to each other's data. 
+
+Example: Two modules communicate through defined interfaces or APIs without sharing data structures.
+
+
+
+
+
+
+
 
 
 
